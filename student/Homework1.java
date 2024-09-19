@@ -34,7 +34,7 @@ public class Homework1 {
         return isPrime;
     }
 
-public  int hex2int(String hex) {
+   public  int hex2int(String hex) {
     //TODO Write your code here for problem 4
     if(num.length()>1)
         return -1;
@@ -71,4 +71,6 @@ public String int2hex(int value) {
         return "E";
     return "F";
 }
+
+
 }
