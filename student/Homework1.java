@@ -2,23 +2,21 @@ package student;
 
 public class Homework1 {
 
-    
     public double shippingCalculator(int n) {
         if (n == 1) {
             return 10.95;
         } else if (n > 1) {
             return 10.95 + (2.95 * (n - 1));
         } else {
+            System.out.println("Enter a positive number.");
             return 0;
         }
     }
 
-    
     public boolean isValidTriangle(int a, int b, int c) {
         return a + b > c && b + c > a && c + a > b;
     }
 
-    
     public boolean isPrime(int number) {
         if (number <= 1) {
             return false;
@@ -31,7 +29,6 @@ public class Homework1 {
         return true;
     }
 
-    
     public int hex2int(String hex) {
         if (hex.length() > 1) {
             return -1;
@@ -64,7 +61,6 @@ public class Homework1 {
         }
     }
 
-    
     public String int2hex(int value) {
         if (value < 0 || value > 15) {
             return "-1";
