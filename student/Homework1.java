@@ -2,6 +2,7 @@ package student;
 
 public class Homework1 {
 
+    
     public double shippingCalculator(int n) {
         if (n == 1) {
             return 10.95;
@@ -12,10 +13,12 @@ public class Homework1 {
         }
     }
 
+    
     public boolean isValidTriangle(int a, int b, int c) {
         return a + b > c && b + c > a && c + a > b;
     }
 
+    
     public boolean isPrime(int number) {
         if (number <= 1) {
             return false;
@@ -28,42 +31,62 @@ public class Homework1 {
         return true;
     }
 
+    
     public int hex2int(String hex) {
-        if(num.length()>1)
+        if (hex.length() > 1) {
             return -1;
-        if(Character.isDigit(num.charAt(0)))
-            return Integer.valueOf(num);
-        if(num.charAt(0)=='A'||num.charAt(0)=='a')
-            return 10;
-        if(num.charAt(0)=='B'||num.charAt(0)=='b')
-            return 11;
-        if(num.charAt(0)=='C'||num.charAt(0)=='c')
-            return 12;
-        if(num.charAt(0)=='D'||num.charAt(0)=='d')
-            return 13;
-        if(num.charAt(0)=='E'||num.charAt(0)=='e')
-            return 14;
-        if(num.charAt(0)=='F'||num.charAt(0)=='f')
-            return 15;
-        return -1;
+        }
+        char ch = hex.charAt(0);
+        if (Character.isDigit(ch)) {
+            return Integer.parseInt(hex);
+        }
+        switch (ch) {
+            case 'A':
+            case 'a':
+                return 10;
+            case 'B':
+            case 'b':
+                return 11;
+            case 'C':
+            case 'c':
+                return 12;
+            case 'D':
+            case 'd':
+                return 13;
+            case 'E':
+            case 'e':
+                return 14;
+            case 'F':
+            case 'f':
+                return 15;
+            default:
+                return -1;
+        }
     }
+
     
     public String int2hex(int value) {
-        if(num<0||num>15)
+        if (value < 0 || value > 15) {
             return "-1";
-        if(num<10)
-            return String.valueOf(num);
-        if(num==10)
-            return "A";
-        if(num==11)
-            return "B";
-        if(num==12)
-            return "C";
-        if(num==13)
-            return "D";
-        if(num==14)
-            return "E";
-        return "F";
-
+        }
+        if (value < 10) {
+            return String.valueOf(value);
+        }
+        switch (value) {
+            case 10:
+                return "A";
+            case 11:
+                return "B";
+            case 12:
+                return "C";
+            case 13:
+                return "D";
+            case 14:
+                return "E";
+            case 15:
+                return "F";
+            default:
+                return "-1";
+        }
     }
 }
